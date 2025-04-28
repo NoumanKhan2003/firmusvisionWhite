@@ -69,10 +69,10 @@ const AboutPage = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${aboutImg})`,
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${aboutImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          color: "white",
+          color: "black", // Change to dark text for light theme
           textAlign: "center",
           px: 3,
           py: 0,
@@ -89,7 +89,7 @@ const AboutPage = () => {
               textTransform: "uppercase",
             }}
           >
-            Your <span style={{ color: "red" }}>Idea</span> Partner
+            Your <span style={{ color: "#E87E1C" }}>Idea</span> Partner
           </Typography>
 
           <Typography
@@ -109,7 +109,7 @@ const AboutPage = () => {
       </Box>
 
       {/* Industries Section */}
-      <Box sx={{ backgroundColor: "rgb(0, 0, 0)", py: 8 }}>
+      <Box sx={{ backgroundColor: "#f5f5f5", py: 8 }}>
         <Container maxWidth="lg">
           <Typography
             variant="h4"
@@ -118,10 +118,10 @@ const AboutPage = () => {
               fontWeight: "bold",
               mb: 4,
               textAlign: "center",
-              color: "white",
+              color: "black", // Change to dark text
             }}
           >
-            We've Worked With <span style={{ color: "red" }}>150+ Brands</span>{" "}
+            We've Worked With <span style={{ color: "#E87E1C" }}>150+ Brands</span>{" "}
             Across Industries
           </Typography>
           <Box
@@ -151,8 +151,8 @@ const AboutPage = () => {
                   textAlign: "center",
                   minWidth: "120px",
                   flex: "1 0 auto",
-                  bgcolor: "rgba(30, 30, 30, 0.65)",
-                  color: "white",
+                  bgcolor: "#ffffff", // Set background to white
+                  color: "black", // Dark text for light theme
                 }}
               >
                 <Typography>{industry}</Typography>
@@ -167,8 +167,8 @@ const AboutPage = () => {
         sx={{
           minHeight: "50vh",
           position: "relative",
-          backgroundColor: "rgb(0, 0, 0)",
-          color: "white",
+          backgroundColor: "#f5f5f5", // Light background
+          color: "black", // Dark text for light theme
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -185,7 +185,7 @@ const AboutPage = () => {
             height: "100%",
             borderTopRightRadius: "50%",
             borderBottomRightRadius: "50%",
-            backgroundColor: "rgb(30, 30, 30)",
+            backgroundColor: "#ffffff", // Light background for this section
             zIndex: 0,
           }}
         />
@@ -244,7 +244,7 @@ const AboutPage = () => {
                   variant={isMobile ? "h5" : "h4"}
                   fontWeight="bold"
                   mb={2}
-                  color="red"
+                  color="#E87E1C" // Red color for titles
                 >
                   {quotes[index].title}
                 </Typography>
@@ -264,19 +264,18 @@ const AboutPage = () => {
                   sx={{
                     backgroundColor: "white",
                     color: "#E87E1C",
-                    "&:hover": { backgroundColor: "rgba(255,255,255,0.8)" },
-                    boxShadow: "2px 2px 8px rgba(0,0,0,0.2)",
+                    "&:hover": { backgroundColor: "#ffecb3" },
                   }}
                   onClick={prevSlide}
                 >
                   <ChevronLeft />
                 </IconButton>
+
                 <IconButton
                   sx={{
-                    backgroundColor: "rgba(255,255,255,0.3)",
-                    color: "white",
-                    "&:hover": { backgroundColor: "rgba(255,255,255,0.5)" },
-                    boxShadow: "2px 2px 8px rgba(0,0,0,0.2)",
+                    backgroundColor: "white",
+                    color: "#E87E1C",
+                    "&:hover": { backgroundColor: "#ffecb3" },
                   }}
                   onClick={nextSlide}
                 >
@@ -288,7 +287,7 @@ const AboutPage = () => {
         </Container>
       </Box>
 
-      <Box sx={{ py: 8, backgroundColor: "rgb(0, 0, 0)" }}>
+      <Box sx={{ py: 8, backgroundColor: "rgb(255, 255, 255)" }}>
         <Container maxWidth="lg">
           <Box
             sx={{
@@ -305,21 +304,21 @@ const AboutPage = () => {
                 sx={{
                   fontWeight: "bold",
                   mb: 3,
-                  color: "white",
+                  color: "black",
                   textTransform: "uppercase",
                   
                 }}
               >
                 <span style={{ color: "red" }}> MEET THE</span> FOUNDER
               </Typography>
-              <Typography variant="body1" sx={{ mb: 2 }} color="#acacac">
+              <Typography variant="body1" sx={{ mb: 2 }} color="rgb(84, 84, 84)">
                 Nouman Khan has been in the Indian PR industry for a decade. She
                 is the Founder and CEO of Column Inches – a PR agency in Delhi
                 specializing in Corporate Public Relations. She is a seasoned
                 communications professional with expertise in traditional and
                 digital media and formulates highly influential PR strategies.
               </Typography>
-              <Typography variant="body1" sx={{ mb: 2 }} color="#acacac">
+              <Typography variant="body1" sx={{ mb: 2 }} color="rgb(84, 84, 84)">
                 With an in-depth understanding of the industry, the agency under
                 Nouman Khan's leadership delivers integrated communications
                 programs for clients from across all sectors. Nouman Khan
@@ -327,13 +326,13 @@ const AboutPage = () => {
                 startups and businesses to establish a distinguished identity in
                 the Indian market.
               </Typography>
-              <Typography variant="body1" sx={{ mb: 2 }} color="#acacac">
+              <Typography variant="body1" sx={{ mb: 2 }} color="rgb(84, 84, 84)">
                 To help clients scale faster, Nouman Khan delivers strategic
                 Public Relations, Media Relations, Digital Media Promotion,
                 Crisis Communication, Brand Promotion, Startup PR, Event PR,
                 Influencer Marketing campaigns.
               </Typography>
-              <Typography variant="body1" sx={{ mb: 2 }} color="#acacac">
+              <Typography variant="body1" sx={{ mb: 2 }} color="rgb(84, 84, 84)">
                 Nouman Khan has been in the Indian PR industry for a decade. She
                 is the Founder and CEO of Column Inches – a PR agency in Delhi
                 specializing in Corporate Public Relations. She is a seasoned
@@ -362,7 +361,7 @@ const AboutPage = () => {
                 }}
               />
               <Box sx={{ textAlign: "center" }}>
-                <Typography variant="h4" sx={{ fontWeight: "bold" ,color:"white"}}>
+                <Typography variant="h4" sx={{ fontWeight: "bold" ,color:"black"}}>
                   Nouman Khan
                 </Typography>
                 <Typography
