@@ -100,7 +100,7 @@ const ContactUs = () => {
             flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-between",
             alignItems: "center",
-            backgroundColor: "#000",
+            backgroundColor: "rgb(248, 248, 248)",
             color: "#fff",
             p: 4,
           }}
@@ -132,7 +132,7 @@ const ContactUs = () => {
             <Typography
               variant="h3"
               fontWeight="bold"
-              sx={{ mb: 4, fontSize: 35 }}
+              sx={{ mb: 4, fontSize: 35 ,color:"black"}}
             >
               Let’s Get in Touch
             </Typography>
@@ -140,7 +140,7 @@ const ContactUs = () => {
             {/* Email */}
             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
               <Email sx={{ color: "red", mr: 2 }} />
-              <Box>
+              <Box sx={{color:"black"}}>
                 <Typography fontWeight="bold">Email Address</Typography>
                 <Typography>info@firmusvision.com</Typography>
               </Box>
@@ -149,7 +149,7 @@ const ContactUs = () => {
             {/* Phone */}
             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
               <Phone sx={{ color: "red", mr: 2 }} />
-              <Box>
+              <Box sx={{color:"black"}}>
                 <Typography fontWeight="bold">Call Us</Typography>
                 <Typography>+91 9999999999</Typography>
               </Box>
@@ -158,7 +158,7 @@ const ContactUs = () => {
             {/* Address */}
             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
               <LocationOn sx={{ color: "red", mr: 2 }} />
-              <Box>
+              <Box sx={{color:"black"}}>
                 <Typography fontWeight="bold">Address</Typography>
                 <Typography>
                   Plot No-D 107, Vyapar Marg, Sector-2, Noida, UP-201301
@@ -174,13 +174,12 @@ const ContactUs = () => {
               display: "flex",
               flexDirection: "column",
               width: { xs: "100%", md: "50%" },
-              backgroundColor: "#111",
               borderRadius: 2,
               backgroundImage: `url(${img})`,
               backgroundSize: "cover",
             }}
           >
-            <Box sx={{backgroundColor:"rgba(0, 0, 0, 0.6)",p:3}}>
+            <Box sx={{backgroundColor:"rgba(234, 234, 234, 0.81)",p:3}}>
             <Typography
               variant="h6"
               sx={{
@@ -202,10 +201,10 @@ const ContactUs = () => {
                 variant="outlined"
                 label="First Name"
                 slotProps={{
-                  inputLabel: { style: { color: "#fff" } },
+                  inputLabel: { style: { color: "black" } },
                 }}
                 sx={{
-                  input: { color: "#fff" },
+                  input: { color: "black" },
                   fieldset: { borderColor: "#444" },
                 }}
                 onChange={handleChange}
@@ -217,10 +216,10 @@ const ContactUs = () => {
                 variant="outlined"
                 label="Last Name"
                 slotProps={{
-                  inputLabel: { style: { color: "#fff" } },
+                  inputLabel: { style: { color: "black" } },
                 }}
                 sx={{
-                  input: { color: "#fff" },
+                  input: { color: "black" },
                   fieldset: { borderColor: "#444" },
                 }}
                 onChange={handleChange}
@@ -235,11 +234,11 @@ const ContactUs = () => {
               variant="outlined"
               label="Email Address"
               slotProps={{
-                inputLabel: { style: { color: "#fff" } },
+                inputLabel: { style: { color: "black" } },
               }}
               sx={{
                 mt: 2,
-                input: { color: "white" },
+                input: { color: "black" },
                 fieldset: { borderColor: "#444" },
               }}
               onChange={handleChange}
@@ -253,11 +252,11 @@ const ContactUs = () => {
               variant="outlined"
               label="Phone No"
               slotProps={{
-                inputLabel: { style: { color: "#fff" } },
+                inputLabel: { style: { color: "black" } },
               }}
               sx={{
                 mt: 2,
-                input: { color: "#fff" },
+                input: { color: "black" },
                 fieldset: { borderColor: "#444" },
               }}
               onChange={handleChange}
@@ -272,12 +271,12 @@ const ContactUs = () => {
               multiline
               rows={4}
               slotProps={{
-                inputLabel: { style: { color: "#fff" } },
-                input: { style: { color: "#fff" } },
+                inputLabel: { style: { color: "black" } },
+                input: { style: { color: "black" } },
               }}
               sx={{
                 mt: 2,
-                textarea: { color: "#fff" },
+                textarea: { color: "black" },
                 fieldset: { borderColor: "#444" },
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
