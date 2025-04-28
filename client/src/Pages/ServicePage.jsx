@@ -14,8 +14,9 @@ const ServicesPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
-    <Box sx={{ backgroundColor: "black", pb: 10 }}>     
+    <Box sx={{ backgroundColor: "#f4f4f4", pb: 10 }}> {/* Light Background */}
       <Box
         textAlign="center"
         mb={6}
@@ -28,9 +29,9 @@ const ServicesPage = () => {
           variant="h3"
           sx={{
             fontWeight: "bold",
-            color: "white",
+            color: "#333",  // Dark Text Color
             fontSize: { md: "3.5rem", xs: "2.5rem" },
-            pt:4
+            pt: 4
           }}
         >
           <span style={{ color: "red" }}>Our</span> Services
@@ -108,18 +109,19 @@ const ServicesPage = () => {
                   flex: 1,
                   width: isMobile ? "90%" : "45%",
                   textAlign: isMobile ? "center" : "left",
-                  bgcolor: "rgba(22, 22, 22, 0.85)",
+                  bgcolor: "#ffffff", // Light Background for Content Box
                   px: { md: 5, xs: 2 },
                   py: { md: 4, xs: 4 },
                   borderBottomRightRadius: { md: "4rem", xs: "0" },
                   borderTopLeftRadius: { md: "4rem", xs: "0" },
+                  boxShadow: 3, // Adding subtle shadow for better distinction
                 }}
               >
                 <Typography
                   variant="h4"
                   sx={{
                     fontWeight: 700,
-                    color: "red",
+                    color: "red", // Red Text for Title
                     mb: 2,
                     fontSize: { md: "2rem", xs: "1.75rem" },
                   }}
@@ -131,7 +133,7 @@ const ServicesPage = () => {
                   sx={{
                     lineHeight: 1.8,
                     fontSize: { md: "1.1rem", xs: "1rem" },
-                    color: "white",
+                    color: "#333", // Darker Text Color for readability
                   }}
                 >
                   {service.longDescription}
