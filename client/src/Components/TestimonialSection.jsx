@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import { Box, Typography, Avatar, IconButton } from "@mui/material";
+import { Box, Typography, Avatar, IconButton, useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import testimonials from "../Assets/TestimonialData.js";
 
 const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const isSmallScreen = useMediaQuery("(max-width: 600px)"); 
+  const isSmallScreen = useMediaQuery("(max-width: 600px)");
+  const theme = useTheme(); // Use the theme hook to get the current theme
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,19 +26,24 @@ const TestimonialSlider = () => {
     );
   };
 
+  const isDarkMode = theme.palette.mode === 'dark'; // Check if the theme is dark
+
   return (
     <Box
       sx={{
         textAlign: "center",
         py: 5,
-        backgroundColor: "rgb(11, 11, 11)",
+        backgroundColor: isDarkMode ? "rgb(11, 11, 11)" : "#f5f5f5", // Background color changes based on the theme
       }}
     >
       <Typography
         variant="h4"
         fontWeight="bold"
         mb={5}
-        sx={{ color: "white", fontSize: "3rem" }}
+        sx={{
+          color: isDarkMode ? "white" : "black", // Text color changes based on the theme
+          fontSize: "3rem",
+        }}
       >
         What People Think <span style={{ color: "red" }}>About Us</span>
       </Typography>
@@ -60,7 +66,7 @@ const TestimonialSlider = () => {
               left: 30,
               color: "red",
               backgroundColor: "rgba(255, 255, 255, 0.1)",
-              "&:hover": { backgroundColor: "rgba(255, 246, 73, 0.2)" },
+              "&:hover": { backgroundColor: isDarkMode ? "rgba(255, 246, 73, 0.2)" : "rgba(0, 0, 255, 0.2)" },
             }}
           >
             <ArrowBackIos sx={{ fontSize: "2rem" }} />
@@ -68,7 +74,7 @@ const TestimonialSlider = () => {
         )}
 
         {/* Testimonial Content */}
-        <Box sx={{ maxWidth: 800, textAlign: "center", px: 3,color:"rgba(249, 249, 249, 0.86)"}}>
+        <Box sx={{ maxWidth: 800, textAlign: "center", px: 3, color: isDarkMode ? "rgba(249, 249, 249, 0.86)" : "rgba(0, 0, 0, 0.7)" }}>
           <Avatar
             src={testimonials[currentIndex].image}
             sx={{ width: 100, height: 100, mx: "auto", mb: 2 }}
@@ -82,8 +88,7 @@ const TestimonialSlider = () => {
             "{testimonials[currentIndex].text}"
           </Typography>
           <Typography variant="body2" color="red" fontWeight="bold" mt={2}>
-            - {testimonials[currentIndex].author},{" "}
-            {testimonials[currentIndex].designation}
+            - {testimonials[currentIndex].author}, {testimonials[currentIndex].designation}
           </Typography>
         </Box>
 
@@ -96,7 +101,7 @@ const TestimonialSlider = () => {
               right: 30,
               color: "red",
               backgroundColor: "rgba(255, 255, 255, 0.1)",
-              "&:hover": { backgroundColor: "rgba(255, 246, 73, 0.2)" },
+              "&:hover": { backgroundColor: isDarkMode ? "rgba(255, 246, 73, 0.2)" : "rgba(0, 0, 255, 0.2)" },
             }}
           >
             <ArrowForwardIos sx={{ fontSize: "2rem" }} />
@@ -110,10 +115,10 @@ const TestimonialSlider = () => {
           <IconButton
             onClick={prevSlide}
             sx={{
-              color: "blue",
-              backgroundColor: "rgba(0, 0, 255, 0.1)",
+              color: isDarkMode ? "blue" : "blue",
+              backgroundColor: isDarkMode ? "rgba(0, 0, 255, 0.1)" : "rgba(0, 0, 255, 0.1)",
               mx: 1,
-              "&:hover": { backgroundColor: "rgba(0, 0, 255, 0.2)" },
+              "&:hover": { backgroundColor: isDarkMode ? "rgba(0, 0, 255, 0.2)" : "rgba(0, 0, 255, 0.2)" },
             }}
           >
             <ArrowBackIos sx={{ fontSize: "1.5rem" }} />
@@ -122,10 +127,10 @@ const TestimonialSlider = () => {
           <IconButton
             onClick={nextSlide}
             sx={{
-              color: "blue",
-              backgroundColor: "rgba(0, 0, 255, 0.1)",
+              color: isDarkMode ? "blue" : "blue",
+              backgroundColor: isDarkMode ? "rgba(0, 0, 255, 0.1)" : "rgba(0, 0, 255, 0.1)",
               mx: 1,
-              "&:hover": { backgroundColor: "rgba(0, 0, 255, 0.2)" },
+              "&:hover": { backgroundColor: isDarkMode ? "rgba(0, 0, 255, 0.2)" : "rgba(0, 0, 255, 0.2)" },
             }}
           >
             <ArrowForwardIos sx={{ fontSize: "1.5rem" }} />

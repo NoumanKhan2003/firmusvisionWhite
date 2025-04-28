@@ -21,7 +21,7 @@ import {
   HomeRepairService as ServicesIcon,
   PermContactCalendar as ContactIcon,
 } from "@mui/icons-material";
-import logo from "../Assets/logoFirmus.jpg";
+import logo from "../Assets/logoFirmus.png";
 
 const Navbar = () => {
   const [state, setState] = React.useState({ right: false });
@@ -45,7 +45,6 @@ const Navbar = () => {
     { text: "Services", icon: <ServicesIcon />, path: "/services" },
   ];
 
-  // Desktop Navigation List
   const DesktopNav = () => (
     <Box
       component="nav"
@@ -70,7 +69,7 @@ const Navbar = () => {
                 fontSize: "1.2rem",
                 textTransform: "uppercase",
                 letterSpacing: "0.5px",
-                color: "white",
+                color: "black",
                 "&:hover": {
                   backgroundColor:
                     item.text === "Contact Us" ? "red" : "transparent",
@@ -114,12 +113,11 @@ const Navbar = () => {
     </Box>
   );
 
-  // Mobile Drawer List
   const MobileDrawer = () => (
     <Box
       sx={{
         width: 280,
-        backgroundColor: "black",
+        backgroundColor: "#ffffff",
         height: "100%",
       }}
       role="presentation"
@@ -135,7 +133,7 @@ const Navbar = () => {
           />
         </Box>{" "}
       </Box>
-      <Divider sx={{ bgcolor: "white", mb: 1 }} />
+      <Divider sx={{ bgcolor: "black", mb: 1 }} />
       <List>
         {menuItems
           .concat({
@@ -151,7 +149,7 @@ const Navbar = () => {
                 selected={location.pathname === item.path}
                 sx={{
                   "&.Mui-selected": {
-                    backgroundColor: "rgba(255, 165, 0, 0.1)",
+                    backgroundColor: "rgba(255, 0, 0, 0.1)",
                     borderLeft: "4px solid red",
                     "& .MuiListItemIcon-root, & .MuiTypography-root": {
                       color: "red",
@@ -160,7 +158,7 @@ const Navbar = () => {
                   },
                 }}
               >
-                <ListItemIcon sx={{ color: "white" }}>{item.icon}</ListItemIcon>
+                <ListItemIcon sx={{ color: "black" }}>{item.icon}</ListItemIcon>
                 <ListItemText
                   primary={item.text}
                   sx={{
@@ -169,7 +167,7 @@ const Navbar = () => {
                       fontWeight:
                         location.pathname === item.path ? "bold" : "normal",
                       color:
-                        location.pathname === item.path ? "red" : "white",
+                        location.pathname === item.path ? "red" : "black",
                     },
                   }}
                 />
@@ -187,8 +185,8 @@ const Navbar = () => {
         px: { md: "1rem", xs: "1rem" },
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: "black",
-        color: "white",
+        backgroundColor: "#ffffff",
+        color: "black",
         py: 1,
       }}
     >
@@ -246,7 +244,7 @@ const Navbar = () => {
           minWidth: "auto",
         }}
       >
-        <MenuIcon color="warning" sx={{ fontSize: "2rem" }} />
+        <MenuIcon color="error" sx={{ fontSize: "2rem" }} />
       </Button>
 
       {/* Mobile Drawer */}
@@ -256,7 +254,7 @@ const Navbar = () => {
         onClose={toggleDrawer(false)}
         sx={{
           "& .MuiDrawer-paper": {
-            backgroundColor: "#f5f5f5",
+            backgroundColor: "#ffffff",
           },
         }}
       >

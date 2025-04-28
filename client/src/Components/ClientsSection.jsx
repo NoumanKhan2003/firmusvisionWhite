@@ -27,7 +27,7 @@ const ClientsSection = () => {
         justifyContent: "center",
         flexDirection: "column",
         padding: { md: "4rem 3rem", xs: "2rem 1rem" },
-        backgroundColor: "black",
+        backgroundColor: "#fff", // Light background
         fontFamily: "'Poppins', sans-serif",
       }}
     >
@@ -48,7 +48,7 @@ const ClientsSection = () => {
           variant="h3"
           sx={{
             fontSize: { md: "3.5rem", xs: "2.5rem" },
-            color: "white",
+            color: "#333", // Dark text color for light theme
             fontWeight: "bold",
             fontFamily: "'Playfair Display', serif",
             mb: 0,
@@ -67,7 +67,7 @@ const ClientsSection = () => {
         />
       </Box>
 
-      {/* Clients Grid - 4 per row (Company Names in Black) */}
+      {/* Clients Grid - 4 per row (Company Names in Dark) */}
       <Box
         sx={{
           display: "flex",
@@ -97,8 +97,9 @@ const ClientsSection = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   padding: "1rem",
-                  backgroundColor: "#0b0b0b",
+                  backgroundColor: "#f4f4f4", // Light background for client boxes
                   borderRadius: "8px",
+                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Subtle shadow for light theme
                 }}
               >
                 <Typography
@@ -106,7 +107,7 @@ const ClientsSection = () => {
                   sx={{
                     fontWeight: "bold",
                     fontSize: { md: "2rem", xs: "1.2rem" },
-                    color: "#fed2d2",
+                    color: "#333", // Dark color for client names
                     textTransform: "uppercase",
                     textAlign: "center",
                     letterSpacing: "1.5px",

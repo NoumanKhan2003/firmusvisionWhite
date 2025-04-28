@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Button, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
-import WhyChooseUsData from "../Assets/WhyChooseUsData.js"
+import WhyChooseUsData from "../Assets/WhyChooseUsData.js";
 import { useNavigate } from "react-router-dom";
 import prImage from "../Assets/img5.jpg";
 
@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
     <Box
       sx={{
         padding: { md: "2.5rem 3rem", xs: "0rem 2rem" },
-        background: "black",
+        backgroundColor: "#f7f7f7", // Light theme background
       }}
     >
       {/* Title */}
@@ -22,12 +22,12 @@ const WhyChooseUs = () => {
         sx={{
           fontWeight: "bold",
           fontSize: { md: "3rem", xs: "2rem" },
-          color: "white",
+          color: "#333", // Darker text color for light theme
           mb: { md: 2, xs: 2 },
           ml: 0,
         }}
       >
-        Why <span style={{color:"red"}}>Choose Us</span>
+        Why <span style={{ color: "red" }}>Choose Us</span>
       </Typography>
 
       {/* Content Wrapper */}
@@ -42,9 +42,14 @@ const WhyChooseUs = () => {
         {/* Left Section */}
         <Box sx={{ flex: 1, maxWidth: "500px", textAlign: "left" }}>
           <Box
-            sx={{ borderLeft: "3px solid red", paddingLeft: "1rem", ml: 4 ,color:"white"}}
+            sx={{
+              borderLeft: "3px solid red",
+              paddingLeft: "1rem",
+              ml: 4,
+              color: "#333", // Dark text color
+            }}
           >
-            <Typography variant="body1" color="#dfdfdf">
+            <Typography variant="body1" color="#555">
               Branding Area has the best talented team with many years of
               experience in the PR and Digital Marketing domain. We are
               result-oriented and will help your brand grow with the fastest
@@ -54,7 +59,7 @@ const WhyChooseUs = () => {
           <Button
             variant="text"
             sx={{ mt: 3, color: "red", fontWeight: "bold" }}
-            onClick={()=>navigate("/about")}
+            onClick={() => navigate("/about")}
           >
             See More →
           </Button>
@@ -62,14 +67,22 @@ const WhyChooseUs = () => {
             <img
               src={prImage}
               alt="Team Illustration"
-              style={{ width: "100%", maxWidth: "300px",mixBlendMode:"hard-light" }}
+              style={{
+                width: "100%",
+                maxWidth: "300px",
+                mixBlendMode: "normal", // Removed hard-light to keep it neutral
+              }}
             />
           </Box>
         </Box>
 
         {/* Right Section */}
         <Box
-          sx={{ flex: 1, maxWidth: "500px", mt: isSmallScreen ? "3rem" : "0" }}
+          sx={{
+            flex: 1,
+            maxWidth: "500px",
+            mt: isSmallScreen ? "3rem" : "0",
+          }}
         >
           {WhyChooseUsData.map((stat, index) => (
             <Box
@@ -78,7 +91,7 @@ const WhyChooseUs = () => {
                 display: "flex",
                 alignItems: "center",
                 mb: 3,
-                color:"white"
+                color: "#333", // Dark text color
               }}
             >
               {/* Round Percentage Circle */}
@@ -96,7 +109,7 @@ const WhyChooseUs = () => {
                   fontWeight: "bold",
                   fontSize: "1.2rem",
                   mr: 3,
-                  flexShrink: 0, 
+                  flexShrink: 0,
                 }}
               >
                 {stat.percentage}
@@ -107,7 +120,7 @@ const WhyChooseUs = () => {
                 <Typography variant="h6" fontWeight="bold" color="red">
                   {stat.title}
                 </Typography>
-                <Typography variant="body2" color="#c8c8c8">
+                <Typography variant="body2" color="#555">
                   {stat.description}
                 </Typography>
               </Box>

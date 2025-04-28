@@ -33,7 +33,7 @@ const OurWorksSection = () => {
       sx={{
         padding: { md: "4rem 3rem", xs: "2rem 1rem" },
         minHeight: "100vh",
-        backgroundColor: "black",
+        backgroundColor: "#f7f7f7", // Light theme background
       }}
     >
       {/* Title Section */}
@@ -49,7 +49,7 @@ const OurWorksSection = () => {
           variant="h3"
           sx={{
             fontWeight: "bold",
-            color: "white",
+            color: "#333", // Dark text color for light theme
             fontSize: { md: "3.5rem", xs: "2.5rem" },
             textTransform: "uppercase",
           }}
@@ -87,13 +87,13 @@ const OurWorksSection = () => {
               position: "relative",
               height: { md: "330px", xs: "300px" },
               overflow: "hidden",
-              boxShadow: "0 4px 12px rgba(60, 60, 60, 0.61)",
+              boxShadow: "0 4px 12px rgba(60, 60, 60, 0.1)", // Lighter shadow
               transition: "transform 0.3s ease",
               borderBottomRightRadius: "6rem",
               borderTopLeftRadius: "6rem",
               "&:hover": {
                 transform: "translateY(-5px)",
-                cursor:"pointer",
+                cursor: "pointer",
                 "& .image-container": {
                   transform: "scale(1.1)",
                 },
@@ -121,7 +121,7 @@ const OurWorksSection = () => {
               }}
             />
             
-            {/* red Overlay */}
+            {/* Light Overlay */}
             <Box
               className="overlay"
               sx={{
@@ -130,7 +130,7 @@ const OurWorksSection = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                backgroundColor: "rgba(50, 0, 0, 0.7)",
+                backgroundColor: "rgba(245, 201, 201, 0.64)",
                 transition: "opacity 0.3s ease",
                 borderBottomRightRadius: "6rem",
                 borderTopLeftRadius: "6rem",
@@ -146,10 +146,11 @@ const OurWorksSection = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                color: "white",
+                color: "black",
                 textAlign: "center",
                 p: 3,
                 zIndex: 1,
+
               }}
             >
               <Typography
@@ -177,7 +178,7 @@ const OurWorksSection = () => {
         ))}
       </Box>
 
-      {/* View More Button */}
+      {/* View More Button (optional, commented out) */}
       {/* <Box textAlign="center" mt={6}>
         <Button
           variant="outlined"

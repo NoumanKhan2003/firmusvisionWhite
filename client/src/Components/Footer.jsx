@@ -18,7 +18,7 @@ import {
   LocationOn,
 } from "@mui/icons-material";
 import bgImg from "../Assets/bg4.jpg";
-import logo from "../Assets/logoFirmus.jpg";
+import logo from "../Assets/logoFirmus.png";
 
 const Footer = () => {
   const theme = useTheme();

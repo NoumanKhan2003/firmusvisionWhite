@@ -3,13 +3,14 @@ import { Box, Typography, Button } from "@mui/material";
 import heroImage from "../Assets/img1.jpg";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+
 const LandingSection = () => {
   const navigate = useNavigate();
   return (
     <Box
       sx={{
         minHeight: "100vh",
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.88)), url(${heroImage})`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.7)), url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -27,7 +28,7 @@ const LandingSection = () => {
         transition={{ duration: 1, ease: "easeInOut" }}
         sx={{
           maxWidth: { xs: "95%", md: "70%" },
-          color: "white",
+          color: "black",
           textAlign: "center",
         }}
       >
@@ -41,7 +42,8 @@ const LandingSection = () => {
             lineHeight: { xs: 1.3, sm: 1.5 },
           }}
         >
-          India’s Leading <span style={{ color: "#e6433e" }}>PR Agency</span>
+          India’s Leading{" "}
+          <span style={{ color: "#e6433e" }}>PR Agency</span>
         </Typography>
 
         <Typography
@@ -52,6 +54,7 @@ const LandingSection = () => {
             lineHeight: 1.6,
             width: "100%",
             textAlign: "justify",
+            color: "black",
             px: { xs: 0, md: 0 },
           }}
         >
@@ -86,8 +89,8 @@ const LandingSection = () => {
               width: { xs: "100%", sm: "auto" },
               "&:hover": { backgroundColor: "darkred" },
             }}
-            onClick={()=>{
-              navigate("/services")
+            onClick={() => {
+              navigate("/services");
             }}
           >
             OUR SERVICES &gt;
@@ -107,8 +110,8 @@ const LandingSection = () => {
               width: { xs: "100%", sm: "auto" },
               "&:hover": { backgroundColor: "#1c2833" },
             }}
-            onClick={()=>{
-              navigate("/contact")
+            onClick={() => {
+              navigate("/contact");
             }}
           >
             CONTACT US &gt;

@@ -8,7 +8,7 @@ const PRMarketingSection = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#090909",
+        backgroundColor: "#f4f4f4", // Light background
         minHeight: { xs: "auto", md: "100vh" },
         display: "flex",
         justifyContent: "center",
@@ -28,7 +28,7 @@ const PRMarketingSection = () => {
           gap: { xs: "2rem", md: "4rem" },
         }}
       >
-        {/* Image Section - Responsive */}
+        {/* Image Section */}
         <Box
           sx={{
             width: { xs: "100%", md: "50%" },
@@ -47,19 +47,19 @@ const PRMarketingSection = () => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              boxShadow: "3px 3px 15px rgba(255, 255, 255, 0.1)",
+              boxShadow: "3px 3px 15px rgba(0, 0, 0, 0.1)", // Lighter shadow for light theme
             }}
           />
         </Box>
 
-        {/* Text Content Section - Responsive */}
+        {/* Text Content Section */}
         <Box
           sx={{
-            backgroundColor: "#000",
-            color: "white",
+            backgroundColor: "#fff", // Light background for text box
+            color: "#333", // Dark text for readability
             padding: { xs: "1.5rem", md: "2.5rem" },
             borderRadius: "8px",
-            boxShadow: "5px 5px 15px rgba(255, 255, 255, 0.1)",
+            boxShadow: "5px 5px 15px rgba(0, 0, 0, 0.1)", // Light shadow
             width: { xs: "80%", md: "40%" },
             maxWidth: { xs: "100%", md: "500px" },
             textAlign: { xs: "center", md: "left" },
@@ -71,46 +71,57 @@ const PRMarketingSection = () => {
             minHeight: { xs: "auto", md: "400px" },
           }}
         >
-          <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { xs: "1.5rem", md: "3rem"} }}>
-            WHO <span style={{color:"red"}}>WE </span> ARE
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            sx={{
+              fontSize: { xs: "1.5rem", md: "3rem" },
+              color: "#333", // Dark text color for header
+            }}
+          >
+            WHO WE ARE
           </Typography>
+
           <Box
             sx={{
               width: "70px",
               height: "3px",
-              backgroundColor: "red",
+              backgroundColor: "red", // Red underline stays the same
               margin: { xs: "8px auto", md: "2px 0 16px 0" },
             }}
           />
+
           <Typography
             variant="body1"
-            sx={{ 
-              fontSize: { xs: "0.9rem", md: "1rem" }, 
+            sx={{
+              fontSize: { xs: "0.9rem", md: "1rem" },
               lineHeight: "1.6",
-              textAlign: { xs: "center", md: "left" }
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             Welcome to Firmus Vision, your partner in strategic communication
             excellence. We specialize in crafting compelling narratives,
             building media relationships, and delivering measurable results.
           </Typography>
+
           <Typography
             variant="body1"
-            sx={{ 
-              marginTop: "1rem", 
-              fontSize: { xs: "0.9rem", md: "1rem" }, 
+            sx={{
+              marginTop: "1rem",
+              fontSize: { xs: "0.9rem", md: "1rem" },
               lineHeight: "1.6",
-              textAlign: { xs: "center", md: "left" }
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             Our team of industry experts customizes PR solutions that align
             seamlessly with your unique goals. With global reach and local
             expertise, we work round-the-clock for your success.
           </Typography>
+
           <Button
             variant="text"
             sx={{
-              color: "red",
+              color: "red", // Red color for the button text
               marginTop: "1.5rem",
               textTransform: "none",
               fontWeight: "bold",

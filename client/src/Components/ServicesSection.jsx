@@ -15,7 +15,7 @@ const ServicesSection = () => {
         padding: { md: "2rem 3rem", xs: "2rem 1rem" },
         minHeight: "100vh",
         pb: { md: 4, xs: 3 },
-        backgroundColor: "#070707",
+        backgroundColor: "#f7f7f7", // Light theme background
       }}
     >
       {/* Title */}
@@ -31,7 +31,7 @@ const ServicesSection = () => {
           variant="h3"
           sx={{
             fontWeight: "bold",
-            color: "white",
+            color: "#333", // Dark text color for contrast
             fontSize: { md: "3.5rem", xs: "2.5rem" },
           }}
         >
@@ -106,7 +106,7 @@ const ServicesSection = () => {
                 flex: 1,
                 width: isMobile ? "90%" : "45%",
                 textAlign: isMobile ? "center" : "left",
-                backgroundColor: "#0c0c0c",
+                backgroundColor: "#ffffff", // Light background for the content box
                 px: { md: 5, xs: 2 },
                 py: { md: 4, xs: 4 },
                 borderBottomRightRadius: { md: "4rem", xs: "0" },
@@ -129,7 +129,7 @@ const ServicesSection = () => {
                 sx={{
                   lineHeight: 1.8,
                   fontSize: { md: "1.1rem", xs: "1rem" },
-                  color: "white",
+                  color: "#333", // Dark text color for readability
                 }}
               >
                 {service.longDescription}
