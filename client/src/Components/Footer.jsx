@@ -35,9 +35,9 @@ const Footer = () => {
     >
       <Box
         sx={{
-          backgroundColor: "rgba(0, 0, 0, 0.93)",
+          backgroundColor: "rgba(222, 222, 222, 0.76)",
           opacity: 0.9,
-          color: "white",
+          color: "black",
           py: 4,
           px: { xs: 2, md: 4 },
         }}
@@ -49,7 +49,7 @@ const Footer = () => {
             flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-between",
             alignItems: { xs: "center", md: "flex-start" },
-            color: "white",
+            color: "black",
             gap: { xs: 3, md: 0 },
           }}
         >
@@ -91,7 +91,7 @@ const Footer = () => {
               <IconButton
                 sx={{
                   color: "red",
-                  bgcolor: "white",
+                  bgcolor: "black",
                   borderRadius: "50%",
                   width: 40,
                   height: 40,
@@ -99,7 +99,7 @@ const Footer = () => {
                   transition: "transform 0.3s ease-in-out",
                   "&:hover": {
                     transform: "scale(1.2)",
-                    bgcolor: "white",
+                    bgcolor: "black",
                   },
                 }}
               >
@@ -116,7 +116,7 @@ const Footer = () => {
               <IconButton
                 sx={{
                   color: "red",
-                  bgcolor: "white",
+                  bgcolor: "black",
                   borderRadius: "50%",
                   width: 40,
                   height: 40,
@@ -124,7 +124,7 @@ const Footer = () => {
                   transition: "transform 0.3s ease-in-out",
                   "&:hover": {
                     transform: "scale(1.2)",
-                    bgcolor: "white",
+                    bgcolor: "black",
                   },
                 }}
               >
@@ -141,7 +141,7 @@ const Footer = () => {
               <IconButton
                 sx={{
                   color: "red",
-                  bgcolor: "white",
+                  bgcolor: "black",
                   borderRadius: "50%",
                   width: 40,
                   height: 40,
@@ -149,7 +149,7 @@ const Footer = () => {
                   transition: "transform 0.3s ease-in-out",
                   "&:hover": {
                     transform: "scale(1.2)",
-                    bgcolor: "white",
+                    bgcolor: "black",
                   },
                 }}
               >
@@ -179,7 +179,7 @@ const Footer = () => {
           sx={{
             width: "100%",
             height: 2,
-            borderColor: "white",
+            borderColor: "black",
             my: 3,
           }}
         />
@@ -234,7 +234,7 @@ const Footer = () => {
                   transition: "transform 0.2s ease",
                   display: "inline-block",
                   textDecoration: "none",
-                  color: "white",
+                  color: "black",
                   "&:hover": {
                     transform: "translateX(5px)",
                     color: "red",
@@ -250,7 +250,7 @@ const Footer = () => {
                   transition: "transform 0.2s ease",
                   display: "inline-block",
                   textDecoration: "none",
-                  color: "white",
+                  color: "black",
                   "&:hover": {
                     transform: "translateX(5px)",
                     color: "red",
@@ -266,7 +266,7 @@ const Footer = () => {
                   transition: "transform 0.2s ease",
                   display: "inline-block",
                   textDecoration: "none",
-                  color: "white",
+                  color: "black",
                   "&:hover": {
                     transform: "translateX(5px)",
                     color: "red",
@@ -282,7 +282,7 @@ const Footer = () => {
                   transition: "transform 0.2s ease",
                   display: "inline-block",
                   textDecoration: "none",
-                  color: "white",
+                  color: "black",
                   "&:hover": {
                     transform: "translateX(5px)",
                     color: "red",
@@ -298,7 +298,7 @@ const Footer = () => {
                   transition: "transform 0.2s ease",
                   display: "inline-block",
                   textDecoration: "none",
-                  color: "white",
+                  color: "black",
                   "&:hover": {
                     transform: "translateX(5px)",
                     color: "red",
@@ -518,7 +518,7 @@ const Footer = () => {
           sx={{
             width: "100%",
             height: 2,
-            borderColor: "white",
+            borderColor: "black",
             my: 3,
           }}
         />
@@ -548,7 +548,7 @@ const Footer = () => {
             }}
           >
             Made with ❤️ by{" "}
-            <Link href="http://www.linkedin.com/in/nouman-khan-95923a256" target="_blank" rel="noopener" sx={{textDecoration:"none" , color:"white"}}>
+            <Link href="http://www.linkedin.com/in/nouman-khan-95923a256" target="_blank" rel="noopener" sx={{textDecoration:"none" , color:"black"}}>
               Nouman Khan
             </Link>
           </Typography>
