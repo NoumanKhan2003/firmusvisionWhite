@@ -109,7 +109,7 @@ const ServicesPage = () => {
                   flex: 1,
                   width: isMobile ? "90%" : "45%",
                   textAlign: isMobile ? "center" : "left",
-                  bgcolor: "#ffffff", // Light Background for Content Box
+                  bgcolor: "black", // Light Background for Content Box
                   px: { md: 5, xs: 2 },
                   py: { md: 4, xs: 4 },
                   borderBottomRightRadius: { md: "4rem", xs: "0" },
@@ -133,7 +133,7 @@ const ServicesPage = () => {
                   sx={{
                     lineHeight: 1.8,
                     fontSize: { md: "1.1rem", xs: "1rem" },
-                    color: "#333", // Darker Text Color for readability
+                    color: "white", // Darker Text Color for readability
                   }}
                 >
                   {service.longDescription}

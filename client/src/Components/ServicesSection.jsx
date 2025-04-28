@@ -106,7 +106,7 @@ const ServicesSection = () => {
                 flex: 1,
                 width: isMobile ? "90%" : "45%",
                 textAlign: isMobile ? "center" : "left",
-                backgroundColor: "#ffffff", // Light background for the content box
+                backgroundColor: "black", // Light background for the content box
                 px: { md: 5, xs: 2 },
                 py: { md: 4, xs: 4 },
                 borderBottomRightRadius: { md: "4rem", xs: "0" },
@@ -129,7 +129,7 @@ const ServicesSection = () => {
                 sx={{
                   lineHeight: 1.8,
                   fontSize: { md: "1.1rem", xs: "1rem" },
-                  color: "#333", // Dark text color for readability
+                  color: "#fff", // Dark text color for readability
                 }}
               >
                 {service.longDescription}
