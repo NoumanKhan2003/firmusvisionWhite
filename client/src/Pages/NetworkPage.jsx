@@ -113,8 +113,8 @@ const NetworkCoverage = () => {
     <Box
       sx={{
         padding: "30px",
-        backgroundColor: "#0d0d0d",
-        color: "#f0f0f0",
+        backgroundColor: "#f4f4f4", // Light background color
+        color: "#333", // Dark text for light theme
         minHeight: "100vh",
       }}
     >
@@ -128,10 +128,10 @@ const NetworkCoverage = () => {
           fontWeight: "bold",
           fontSize: "3rem",
           fontFamily: "'Playfair Display', serif",
-          color: "#fff",
+          color: "#333", // Dark text
         }}
       >
-        Our Nationwide <span style={{ color: "red" }}>Network</span>
+        Our Nationwide <span style={{ color: "#f44336" }}>Network</span>
       </Typography>
 
       {/* Search Bar */}
@@ -152,22 +152,22 @@ const NetworkCoverage = () => {
           onKeyDown={handleKeyDown}
           sx={{
             input: {
-              color: "#fff",
-              backgroundColor: "#121212",
+              color: "#333", // Dark input text for light theme
+              backgroundColor: "#fff", // Light input background
             },
             "& .MuiOutlinedInput-root": {
               "& fieldset": {
-                borderColor: "#555",
+                borderColor: "#ccc", // Lighter border
               },
               "&:hover fieldset": {
                 borderColor: "#888",
               },
               "&.Mui-focused fieldset": {
-                borderColor: "#aaa",
+                borderColor: "#333", // Darker border on focus
               },
             },
             "& input::placeholder": {
-              color: "#bbb",
+              color: "#888", // Lighter placeholder
               opacity: 1,
             },
             width: "90%",
@@ -186,9 +186,9 @@ const NetworkCoverage = () => {
           sx={{
             minWidth: "40px",
             height: "56px",
-            backgroundColor: "#222",
+            backgroundColor: "#f44336", // Red button
             "&:hover": {
-              backgroundColor: "#444",
+              backgroundColor: "#e53935", // Darker red on hover
             },
           }}
         >
@@ -198,7 +198,7 @@ const NetworkCoverage = () => {
 
       {/* Feedback Messages */}
       {foundMessage && (
-        <Typography align="center" color="lightgreen" sx={{ mb: 2 }}>
+        <Typography align="center" color="green" sx={{ mb: 2 }}>
           {foundMessage}
         </Typography>
       )}
@@ -241,7 +241,7 @@ const NetworkCoverage = () => {
               borderRadius: "10px",
               overflow: "hidden",
               minHeight: "250px",
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${regionBackgrounds[region]})`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${regionBackgrounds[region]})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               padding: "30px",
@@ -252,7 +252,7 @@ const NetworkCoverage = () => {
               variant="h5"
               align="center"
               gutterBottom
-              sx={{ color: "white", fontWeight: "bold" }}
+              sx={{ color: "#fff", fontWeight: "bold" }}
             >
               {region} Region
             </Typography>
