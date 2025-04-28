@@ -55,8 +55,8 @@ const PRMarketingSection = () => {
         {/* Text Content Section */}
         <Box
           sx={{
-            backgroundColor: "#fff", // Light background for text box
-            color: "#333", // Dark text for readability
+            backgroundColor: "black", // Light background for text box
+            color: "#fff", // Dark text for readability
             padding: { xs: "1.5rem", md: "2.5rem" },
             borderRadius: "8px",
             boxShadow: "5px 5px 15px rgba(0, 0, 0, 0.1)", // Light shadow
@@ -76,7 +76,7 @@ const PRMarketingSection = () => {
             fontWeight="bold"
             sx={{
               fontSize: { xs: "1.5rem", md: "3rem" },
-              color: "#333", // Dark text color for header
+              color: "#fff", // Dark text color for header
             }}
           >
             WHO <span style={{color:"red"}}>WE</span> ARE
