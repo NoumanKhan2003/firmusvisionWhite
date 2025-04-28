@@ -79,7 +79,7 @@ const PRMarketingSection = () => {
               color: "#333", // Dark text color for header
             }}
           >
-            WHO WE ARE
+            WHO <span style={{color:"red"}}>WE</span> ARE
           </Typography>
 
           <Box
