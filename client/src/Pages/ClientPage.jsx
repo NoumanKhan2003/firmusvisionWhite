@@ -21,11 +21,11 @@ const ClientsPage = () => {
   }, []);
 
   return (
-    <Box sx={{ backgroundColor:"rgb(0, 0, 0)" }}>
+    <Box sx={{ backgroundColor: "white" }}>
       <Box
         sx={{
           height: isMobile ? "180px" : "300px",
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${clientpic})`,
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05)), url(${clientpic})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
@@ -39,7 +39,7 @@ const ClientsPage = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(0,0,0,0.4)",
+            backgroundColor: "rgba(255,255,255,0.5)",
           },
           mb: isMobile ? 3 : 6,
         }}
@@ -47,18 +47,18 @@ const ClientsPage = () => {
         <Typography
           variant={isMobile ? "h5" : "h2"}
           sx={{
-            color: "white",
+            color: "#333", // Dark text for light theme
             fontWeight: "bold",
-            fontSize:isMobile ? "2.4rem": "4rem",
+            fontSize: isMobile ? "2.4rem" : "4rem",
             position: "relative",
             zIndex: 1,
             textAlign: "center",
             px: 2,
-            textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.2)", // Lighter shadow
             fontFamily: "'Playfair Display', serif",
           }}
         >
-          OUR <span style={{color:"red"}}>CLIENTS</span>
+          OUR <span style={{ color: "#E87E1C" }}>CLIENTS</span>
         </Typography>
       </Box>
 
@@ -81,12 +81,12 @@ const ClientsPage = () => {
             variant={isMobile ? "h5" : "h4"}
             sx={{
               fontWeight: "bold",
-              color: "white",
+              color: "#333", // Dark text for light theme
               fontFamily: "'Playfair Display', serif",
               mx: { md: 2, xs: 0 },
             }}
           >
-            Trusted by <span style={{color:"red"}}>Industry Leaders</span>
+            Trusted by <span style={{ color: "#E87E1C" }}>Industry Leaders</span>
           </Typography>
           <MoreIcon
             sx={{ fontSize: "3rem", display: isMobile ? "none" : "block" }}
@@ -120,10 +120,13 @@ const ClientsPage = () => {
                 p: isMobile ? 1 : 2,
                 textAlign: "center",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                backgroundColor: "#fafafa", // Light background for each client box
+                borderRadius: "8px", // Added border radius for smooth corners
+                boxShadow: "0 4px 10px rgba(0,0,0,0.1)", // Soft shadow for light theme
 
                 "&:hover": {
                   transform: "scale(1.05)",
-                  boxShadow: '0px 4px 12px rgba(255, 255, 255, 0.26)'
+                  boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.2)", // Darker shadow on hover
                 },
               }}
             >
@@ -131,7 +134,7 @@ const ClientsPage = () => {
                 variant={isMobile ? "body2" : isTablet ? "h6" : "h5"}
                 sx={{
                   fontWeight: "bold",
-                  color: "#fed2d2",
+                  color: "#333", // Dark text for client names
                   fontFamily: "'Playfair Display', serif",
                   letterSpacing: "0.5px",
                   textTransform: "uppercase",
